@@ -1,0 +1,21 @@
+.link {
+  text-decoration: none;
+  color: gray;
+}
+
+.categoryTextTitle {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.categoryPic {
+  width: 20px;
+  height: 20px;
+}
+
+.categoryTopicContainer {
+  cursor: pointer;
+  margin-top: 5px;
+  /* border: 1px solid red; */
+  /* margin-right: 20%; */
+}

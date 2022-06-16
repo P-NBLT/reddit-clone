@@ -1,0 +1,52 @@
+.filterBarContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  height: 50px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.filterBarButton {
+  border: none;
+  border-radius: 16px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: "pointer";
+  margin-left: 8px;
+  height: 70%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.filterBarButton:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.filterBarButton img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.dot img {
+  display: flex;
+  justify-content: center;
+  margin-right: 0px;
+}
+
+.filterBarButton p {
+  margin-right: 5px;
+  color: #7e8183;
+  font-weight: 550;
+}
+
+.active p {
+  color: #1879d3;
+}
+
+.active {
+  background-color: #f6f7f8;
+}

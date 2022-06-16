@@ -9,12 +9,27 @@ export const getSubredditData = createAsyncThunk(
   }
 );
 
+export const getFilteredSubredditData = createAsyncThunk(
+  "category/getFilteredSubredditData",
+  async (obj) => {
+    const getData = await fetch(
+      `https://www.reddit.com/r/${obj.topic}/${obj.option}.json`
+    );
+    const response = await getData.json();
+    console.log("response", response);
+    return response;
+  }
+);
+
 const categorySlice = createSlice({
   name: "category",
-  initialState: { topic: "", data: "", loading: "null" },
+  initialState: { topic: "", data: "", loading: "null", option: "" },
   reducers: {
     updateCategory: (state, { payload }) => {
       state.topic = payload;
+    },
+    updateOption: (state, { payload }) => {
+      state.option = payload;
     },
   },
   extraReducers: {
@@ -26,6 +41,16 @@ const categorySlice = createSlice({
       state.data = payload;
     },
     [getSubredditData.rejected]: (state) => {
+      state.loading = "failed";
+    },
+    [getFilteredSubredditData.pending]: (state) => {
+      state.loading = "loading";
+    },
+    [getFilteredSubredditData.fulfilled]: (state, { payload }) => {
+      state.loading = "succes";
+      state.data = payload;
+    },
+    [getFilteredSubredditData.rejected]: (state) => {
       state.loading = "failed";
     },
   },

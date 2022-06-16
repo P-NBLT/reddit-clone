@@ -1,12 +1,12 @@
 import React from "react";
 import Categories from "../Component/Categories";
+import FilterBar from "../Component/FilterBar";
 import Subreddit from "./Subreddit";
 
 const Home = () => {
   return (
     <div>
-      <Categories />
-      <Subreddit />
+      <FilterBar />
     </div>
   );
 };
