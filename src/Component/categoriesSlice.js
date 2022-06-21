@@ -1,5 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+export const getHomeData = createAsyncThunk(
+  "category/getHomeData",
+  async () => {
+    const getData = await fetch(`https://www.reddit.com/.json`);
+    const response = await getData.json();
+    return response;
+  }
+);
+
 export const getSubredditData = createAsyncThunk(
   "category/fetchSubreddit",
   async (topic) => {
@@ -31,8 +40,21 @@ const categorySlice = createSlice({
     updateOption: (state, { payload }) => {
       state.option = payload;
     },
+    resetLoading: (state) => {
+      state.loading = "null";
+    },
   },
   extraReducers: {
+    [getHomeData.pending]: (state) => {
+      state.loading = "lodaing";
+    },
+    [getHomeData.fulfilled]: (state, { payload }) => {
+      state.loading = "succes";
+      state.data = payload;
+    },
+    [getHomeData.rejected]: (state) => {
+      state.loading = "failed";
+    },
     [getSubredditData.pending]: (state) => {
       state.loading = "loading";
     },

@@ -12,8 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="r/:subId" element={<Subreddit />} />
-          <Route path="/:permalinkId" element={<Article />} />
+          <Route path="r/:subId" element={<Subreddit />}>
+            <Route path=":permalinkId" element={<Article />} />
+          </Route>
+          <Route path="test" element={<Article />} />
         </Route>
       </Routes>
     </BrowserRouter>

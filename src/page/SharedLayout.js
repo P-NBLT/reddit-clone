@@ -3,6 +3,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Categories from "../Component/Categories";
 import Subreddit from "./Subreddit";
+import "./SharedLayout.css";
 
 const SharedLayout = () => {
   return (
@@ -12,16 +13,21 @@ const SharedLayout = () => {
         flexDirection: "row-reverse",
         border: "1px solid blue",
         width: "100%",
-
-        // marginRight: "20%",
       }}
     >
-      {/* <div style={{ marginRight: "35%" }}>SharedLayout</div> */}
-      <div style={{ width: "20%", minWidth: "200px", marginRight: "25%" }}>
+      <div
+        style={{
+          width: "20%",
+          minWidth: "200px",
+          marginRight: "25%",
+          marginTop: "20px",
+        }}
+      >
         <Categories />
       </div>
-
+      {/* <div className="outlet"> */}
       <Outlet />
+      {/* </div> */}
     </div>
   );
 };

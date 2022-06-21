@@ -16,6 +16,7 @@
 .categoryTopicContainer {
   cursor: pointer;
   margin-top: 5px;
+  /* height: 70px; */
   /* border: 1px solid red; */
   /* margin-right: 20%; */
 }

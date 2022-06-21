@@ -1,16 +1,17 @@
-.LinkSubredditCard {
+.LinkHomeCard {
   text-decoration: none;
   color: black;
 }
 
-.subredditContainer {
+.homeContainer {
   margin-right: 15px;
   min-width: 100px;
   max-width: 38%;
+
   /* border: 1px solid green; */
 }
 
-.subbreditCard {
+.homeCard {
   display: flex;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -20,7 +21,7 @@
   background-color: white;
 }
 
-.leftSubbreditCard {
+.leftHomeCard {
   background-color: #f8f9fa;
   min-width: 50px;
   max-width: 50px;
@@ -33,7 +34,7 @@
   padding-top: 5%;
 }
 
-.rightSubbreditCard {
+.rightHomeCard {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,7 +42,7 @@
   margin-left: 1.5%;
 }
 
-.bottomSubbreditCard {
+.bottomHomeCard {
   display: flex;
   align-items: center;
   margin-left: 2%;
@@ -51,7 +52,7 @@
   box-sizing: border-box;
 }
 
-.authorSubbreditCard {
+.authorHomeCard {
   font-size: 12px;
   color: grey;
   margin-left: 1%;
@@ -60,14 +61,14 @@
   /* border: 1px solid orange; */
 }
 
-.titleSubbreditCard {
+.titleHomeCard {
   /* border: 1px solid red; */
   margin-bottom: 0;
   padding-bottom: 0;
   margin-top: 10px;
 }
 
-.textSubbreditCard {
+.textHomeCard {
   margin-bottom: 0;
   padding-bottom: 0;
   margin-top: 10px;
@@ -75,7 +76,7 @@
   margin-right: 15px;
 }
 
-.commentSubbreditCard {
+.commentHomeCard {
   color: #878a8c;
   padding-left: 5px;
   padding-right: 5px;
@@ -87,49 +88,30 @@
   /* border: 1px solid green; */
 }
 
-.picSubbreditCard {
+.picHomeCard {
   width: 18px;
   height: 12px;
 }
 
-.picSubbreditCardBody {
+.picHomeCardBody {
   width: 300px;
   height: 300px;
   margin-left: 20%;
+  margin-top: 5px;
 }
 
-.picBottomSubbreditCard {
+.picBottomHomeCard {
   width: 15px;
   height: 15px;
   /* border: 1px solid red; */
   margin-top: 0px;
 }
 
-.buttonScoreSubbreditCard {
+.buttonScoreHomeCard {
   background-color: transparent;
   border: none;
 }
 
-.buttonScoreSubbreditCard:hover {
+.buttonScoreHomeCard:hover {
   cursor: pointer;
-}
-
-.imageLoading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10vw;
-  margin-top: 20vh;
-}
-
-.imageLoading img {
-  width: 200px;
-  height: 200px;
-}
-
-.imageLoading p {
-  color: #ff4500;
-  font-weight: 600;
-  font-size: 20px;
 }

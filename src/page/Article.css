@@ -1,0 +1,403 @@
+.fullContainerArticleCard {
+  background-color: #dae0e6;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7vw;
+  /* margin-right: 20px; */
+  width: 980px;
+  max-width: 1000px;
+}
+.headerArticleCard {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  background-color: #030303;
+  color: #9ea0a2;
+  font-size: 12px;
+  font-weight: 600;
+  transform: translateX(-0.2%);
+  /* margin-bottom: 20px; */
+}
+
+.leftHeaderArticleCard {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.separatorHeaderArticleCard {
+  height: 15px;
+  border-left: 1px solid #9ea0a2;
+}
+
+.arrowHeaderArticleCard img {
+  width: 30px;
+  height: 20px;
+}
+
+.titleHeaderArticleHeader {
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+.rightHeaderArticleCard {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border: none;
+  /* border: 1px solid red; */
+  background-color: transparent;
+  color: #9ea0a2;
+  font-weight: 800;
+}
+
+.rightHeaderArticleCard p {
+  margin-left: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.arrowHeaderArticleCard {
+  border: none;
+  background-color: transparent;
+}
+
+.crossCloseArticleCard {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.articleAndCommentsContainerMaster {
+  display: flex;
+  margin-top: 70px;
+
+  /* border: 1px solid green; */
+}
+
+.articleAndCommentsContainer {
+  /* display: flex; */
+  background-color: white;
+  width: 699px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.articleCard {
+  display: flex;
+  /* width: 100%; */
+  /* border: 1px solid blue; */
+}
+
+.leftArticleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  margin-right: 7px;
+  margin-left: 5px;
+  margin-top: 10px;
+  /* border: 1px solid red; */
+}
+
+.righttArticleCard {
+  /* margin-top: 10px; */
+  margin-left: 5px;
+  /* border: 1px solid purple; */
+  width: 600px;
+}
+
+.upArticleCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.upLeftArticleCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* border: 1px solid green; */
+}
+
+.upLeftArticleCard p {
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.middleArticleCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomArticleCard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+
+  /* border: 1px solid red; */
+}
+
+.bottomLeftArticleCard {
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  margin-top: 9px;
+  margin-bottom: 10;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.picArticleCard {
+  width: 300px;
+  height: 300px;
+  margin-left: 20%;
+}
+
+.buttonBottomArticleCard {
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+  border: none;
+  background-color: transparent;
+  color: #878a8c;
+  padding-left: 0px;
+  /* border: 1px solid red; */
+}
+
+.buttonBottomArticleCard:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.buttonBottomArticleCard p {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.subredditArticleCard {
+  font-size: 13px;
+}
+
+.authorArticleCard {
+  color: #878a8c;
+  font-size: 11px;
+}
+
+.buttonArrow {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonArrow:hover {
+  cursor: pointer;
+  background-color: #ededed;
+}
+
+.buttonUpScoreArticleCard {
+  margin-top: 10px;
+}
+
+.scoreArticleCard {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 25px;
+}
+
+.bellArticleCard {
+  background-color: transparent;
+  border: none;
+}
+
+.buttomRightArticleCard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #9ea0a2;
+  font-size: 14px;
+  font-weight: 500;
+
+  /* width: 200px; */
+}
+
+.hide img {
+  width: 30px;
+  height: 30px;
+}
+.report img {
+  width: 30px;
+  height: 30px;
+}
+
+.logginForCommentsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 30px;
+  margin-left: 62px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.logginForCommentsContainer p {
+  margin-left: 5px;
+  color: #7c7c7c;
+  font-weight: 600;
+}
+
+.login {
+  background-color: white;
+  color: #3f8eda;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1px solid #3f8eda;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.signup {
+  background-color: #3f8eda;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.commentCard {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.bottomCommentCard {
+  display: flex;
+  align-items: center;
+}
+
+.topCommentCard {
+  display: flex;
+  align-items: center;
+}
+
+.topCommentCard p {
+  margin: 2px;
+  margin-right: 3px;
+}
+
+.timeCommentCard {
+  color: #878a8c;
+  font-weight: 400;
+}
+
+.commentBodyAnswer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buttonCommentCard {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.buttonCommentCard p {
+  margin: 0;
+  margin-left: 5px;
+  color: #7c7c7c;
+  font-weight: 700;
+}
+
+.scoreCommentCard {
+  font-weight: 600;
+}
+
+.buttonCommentCard img {
+  width: 25px;
+}
+
+.articleCategoryCard {
+  /* display: flex; */
+  position: fixed;
+  width: 200px;
+  height: 500px;
+  /* right: 19%; */
+  transform: translateX(370%);
+
+  /* border: 1px solid red; */
+}
+
+.moveToTopArticleCard button {
+  position: fixed;
+  bottom: 0;
+  transform: translate(40%, -50%);
+  background-color: #3f8eda;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.imageLoading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30vw;
+  margin-top: 20vh;
+}
+
+.imageLoading img {
+  width: 200px;
+  height: 200px;
+}
+
+.imageLoading p {
+  color: #ff4500;
+  font-weight: 600;
+  font-size: 20px;
+}

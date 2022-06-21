@@ -47,7 +47,7 @@ const FilterBar = () => {
         : null;
     dispatch(actionsCategory.updateOption(id));
   };
-  console.log("option", option, topic);
+  //   console.log("option", option, topic);
   useEffect(() => {
     console.log("will it pass?");
     const fetchData = async () => {

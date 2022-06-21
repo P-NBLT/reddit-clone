@@ -1,0 +1,119 @@
+.loginContainer {
+  display: flex;
+  width: 50vw;
+  height: 100vh;
+  border: 1px solid red;
+  margin-left: 15vw;
+  background-color: white;
+}
+.leftLoginContainer {
+  width: 120px;
+  background-image: url("https://www.redditstatic.com/accountmanager/bbb584033aa89e39bad69436c504c9bd.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+
+.rightLoginContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.closeButtonLoginCard {
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px solid green; */
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.closeButtonLoginCard button {
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 550;
+  color: #9ea0a2;
+}
+
+#login {
+  margin-top: 10vh;
+}
+
+.automaticLogin button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: 30px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.automaticLogin img {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.automaticLogin p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 60px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.secondPartRightLoginCard {
+  width: 300px;
+  /* border: 1px solid green;/ */
+}
+
+.orSeeparatorLoginCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lineSeparatorLoginCard {
+  width: 110px;
+  border-bottom: 1px solid #ccc;
+}
+
+.inputLoginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 115px;
+}
+
+.inputLoginCard input {
+  height: 45px;
+  text-align: start;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.loginButtonLoginCard {
+  background-color: #3f8eda;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  width: 100%;
+  margin-top: 10px;
+}
