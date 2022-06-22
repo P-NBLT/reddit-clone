@@ -3,11 +3,25 @@ import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { BsSearch } from "react-icons/bs";
 import { PhoneIcon } from '@chakra-ui/icons';
 import DrawerHam from './DrawerHam';
+import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
+    const [text, setText] = useState('')
+    const [searchParams, setSearchParams] = useSearchParams()
+    
+    const keyDownHandler = (e)=>{
+        if(e.code==='Enter'){
+            setSearchParams(`q=${text}`)
+            
+        }
+    }
+    const handleSearch = (e)=>{setText(e.target.value)}
     return (
         <div>
-            <div className="flex items-center space-x-2 py-2 justify-between">
+            <div className="flex items-center space-x-2 py-1 justify-between">
                 <div className='flex items-center space-x-2'>
                     <div className='hamIcon '>
                         <DrawerHam />
@@ -20,15 +34,17 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div className='flex items-center justify-between w-[1500px]'>
-                    <div className='input'>
+                    <div className='input flex items-center'>
+                        <Link to='search/'>
                         <InputGroup>
                             <InputLeftElement
                                 pointerEvents='none'
-                                children={<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-7" fill="none" viewBox="0 0 24 22" stroke="currentColor" strokeWidth={1} color='gray'>
+                                children={<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-8 " fill="none" viewBox="0 0 28 28" stroke="currentColor" strokeWidth={1} color='gray'>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>} />
-                            <Input type='text' placeholder='Search Reddit' width={650} variant='filled' />
+                            <Input type='text' placeholder='Search Reddit' width={650} variant='filled' onKeyDown={keyDownHandler} value={text} onChange={handleSearch} />
                         </InputGroup>
+                        </Link>
                     </div>
                     <div className='flex items-center'>
                         <div className='mx-5'>
