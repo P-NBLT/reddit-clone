@@ -47,12 +47,10 @@ const FilterBar = () => {
         : null;
     dispatch(actionsCategory.updateOption(id));
   };
-  //   console.log("option", option, topic);
+
   useEffect(() => {
-    console.log("will it pass?");
     const fetchData = async () => {
       if (topic && option) {
-        console.log("pass");
         dispatch(getFilteredSubredditData({ topic, option }));
       }
     };

@@ -5,6 +5,7 @@ import Home from "./page/Home";
 import SharedLayout from "./page/SharedLayout";
 import Subreddit from "./page/Subreddit";
 import Article from "./page/Article";
+import Error from "./Error";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Route path="r/:subId" element={<Subreddit />}>
             <Route path=":permalinkId" element={<Article />} />
           </Route>
-          <Route path="test" element={<Article />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

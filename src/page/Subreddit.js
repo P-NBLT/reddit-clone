@@ -25,9 +25,13 @@ const Subreddit = () => {
   const status = useSelector((state) => state.category.loading);
   const { permalinkId } = useParams();
   const { subId } = useParams();
-
+  console.log("params", subId, permalinkId, data);
   // we use useState to know if the modal is open or close.
   const [isOpen, setIsOpen] = useState(false);
+
+  const getMedia = (url) => {
+    return url.replace(new RegExp(`(https://)(.)(\.*$)`), "$2");
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,27 +42,31 @@ const Subreddit = () => {
     fetchData();
   }, [topic]);
 
+  useEffect(() => {
+    dispatch(actionsCategory.updateCategory(subId));
+  }, [subId]);
+
   const handleClick = (e) => {
     let id = e.target.closest("a").id;
     const dataForArticle = data.data.children[Number(id)].data.permalink;
-
+    console.log("id", id);
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
-  console.log("status", status);
+  console.log("open", isOpen);
   if (!isOpen) {
     return (
       <>
         {status == "succes" ? (
           <div className="subredditContainer">
-            <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal>
-            <div>Subreddit</div>
-            <FilterBar />
+            {/* <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal> */}
+            <div>
+              <FilterBar />
+            </div>
             {data
               ? data.data.children.map((el, idx) => {
                   let text;
                   if (el.data.selftext && el.data.selftext.length > 150) {
-                    console.log("text is long");
                     text = el.data.selftext.slice(0, 250).concat("...");
                   } else {
                     text = el.data.selftext;
@@ -103,11 +111,19 @@ const Subreddit = () => {
                           {text ? (
                             <p className="textSubbreditCard">{text}</p>
                           ) : null}
-                          {el.data.url ? (
+                          {getMedia(el.data.url) == "i" ? (
                             <img
                               src={el.data.url}
-                              className="picSubbreditCardBody"
+                              className="picAndVidSubbreditCardBody"
                             />
+                          ) : getMedia(el.data.url) == "v" ? (
+                            <video
+                              src={el.data.media.reddit_video.fallback_url}
+                              autoPlay
+                              muted
+                              controls
+                              className="picAndVidSubbreditCardBody"
+                            ></video>
                           ) : null}
                           <div className="bottomSubbreditCard">
                             <img

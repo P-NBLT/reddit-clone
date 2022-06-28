@@ -2,21 +2,23 @@
   background-color: #dae0e6;
   display: flex;
   flex-direction: column;
-  margin-left: 7vw;
+  /* margin-left: 7vw; */
   /* margin-right: 20px; */
-  width: 980px;
-  max-width: 1000px;
+  width: 100%;
+  /* min-width: 1000px; */
 }
+
 .headerArticleCard {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  width: 980px;
+  /* width: 100%; */
+  width: 59.4vw;
   background-color: #030303;
   color: #9ea0a2;
   font-size: 12px;
   font-weight: 600;
-  transform: translateX(-0.2%);
+  /* transform: translateX(-0.3%); */
   /* margin-bottom: 20px; */
 }
 
@@ -73,21 +75,37 @@ button:hover {
 .articleAndCommentsContainerMaster {
   display: flex;
   margin-top: 70px;
-
+  height: 100vh;
   /* border: 1px solid green; */
+}
+
+.articleCategoryCard {
+  /* display: flex; */
+  position: fixed;
+  margin-left: 45%;
+  /* right: 10%; */
+  width: 12.5%;
+  height: 500px;
+  /* margin-right: 25%; */
+  /* margin-left: 65%; */
+  /* transform: translateX(320%); */
+
+  /* border: 1px solid red; */
 }
 
 .articleAndCommentsContainer {
   /* display: flex; */
   background-color: white;
-  width: 699px;
+  width: 70%;
   margin-left: 30px;
   margin-right: 10px;
 }
 
 .articleCard {
   display: flex;
-  /* width: 100%; */
+  /* justify-content: space-between; */
+  width: 100%;
+  /* background-color: #030303; */
   /* border: 1px solid blue; */
 }
 
@@ -95,9 +113,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50px;
-  margin-right: 7px;
-  margin-left: 5px;
+  width: 10%;
+  max-width: 35px;
+  /* margin-right: 7px; */
+  margin-right: 1%;
+  margin-left: 1.2%;
   margin-top: 10px;
   /* border: 1px solid red; */
 }
@@ -106,14 +126,15 @@ button:hover {
   /* margin-top: 10px; */
   margin-left: 5px;
   /* border: 1px solid purple; */
-  width: 600px;
+  width: 86%;
 }
 
 .upArticleCard {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 5px;
+  /* border: 1px solid green; */
 }
 
 .upLeftArticleCard {
@@ -132,11 +153,14 @@ button:hover {
 .middleArticleCard {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  /* border: 1px solid cyan; */
 }
 
 .bottomArticleCard {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 10px;
   width: 100%;
 
@@ -146,10 +170,12 @@ button:hover {
 .bottomLeftArticleCard {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 h3 {
   margin-top: 9px;
   margin-bottom: 10;
+  width: 100%;
 }
 
 img {
@@ -158,9 +184,12 @@ img {
 }
 
 .picArticleCard {
-  width: 300px;
-  height: 300px;
+  /* width: 300px; */
+  min-width: 40%;
+  height: 40%;
   margin-left: 20%;
+  margin-right: 20%;
+  /* border: 1px solid red; */
 }
 
 .buttonBottomArticleCard {
@@ -307,6 +336,7 @@ img {
 .bottomCommentCard {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .topCommentCard {
@@ -351,21 +381,10 @@ img {
   width: 25px;
 }
 
-.articleCategoryCard {
-  /* display: flex; */
-  position: fixed;
-  width: 200px;
-  height: 500px;
-  /* right: 19%; */
-  transform: translateX(370%);
-
-  /* border: 1px solid red; */
-}
-
 .moveToTopArticleCard button {
   position: fixed;
   bottom: 0;
-  transform: translate(40%, -50%);
+  transform: translate(35%, -50%);
   background-color: #3f8eda;
   color: white;
   border: none;
@@ -382,12 +401,16 @@ img {
   line-height: 17px;
 }
 
+.emptyComment {
+  height: 100%;
+}
+
 .imageLoading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 30vw;
+  margin-left: 5vw;
   margin-top: 20vh;
 }
 
@@ -400,4 +423,21 @@ img {
   color: #ff4500;
   font-weight: 600;
   font-size: 20px;
+}
+
+@media screen and (max-width: 1294px) {
+  .moveToTopArticleCard button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .articleCategoryCard {
+    display: none;
+  }
+
+  .articleAndCommentsContainer {
+    width: 100%;
+    border: 1px solid red;
+  }
 }

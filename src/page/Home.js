@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import FilterBar from "../Component/FilterBar";
 import {
   actionsCategory,
@@ -21,8 +21,13 @@ const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.category.data);
   const navigate = useNavigate();
+  const { subId } = useParams();
   // we use useState to know if the modal is open or close.
   const [isOpen, setIsOpen] = useState(false);
+
+  const getMedia = (url) => {
+    return url.replace(new RegExp(`(https://)(.)(\.*$)`), "$2");
+  };
 
   const handleScore = (e) => {
     e.stopPropagation();
@@ -31,7 +36,6 @@ const Home = () => {
   const handleClick = (e) => {
     e.preventDefault();
     let id = e.target.closest("a").id;
-    console.log(id);
     const dataForArticle = data.data.children[Number(id)].data.permalink;
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
@@ -44,19 +48,17 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log("data", data);
+  console.log("data", data, "prams", subId);
   if (!isOpen) {
     return (
       <div className="homeContainer">
         <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal>
-        <div>Subreddit</div>
         <FilterBar />
 
         {data
           ? data.data.children.map((el, idx) => {
               let text;
               if (el.data.selftext && el.data.selftext.length > 150) {
-                console.log("text is long");
                 text = el.data.selftext.slice(0, 250).concat("...");
               } else text = el.data.selftext;
               return (
@@ -89,8 +91,19 @@ const Home = () => {
                       </p>
                       <h4 className="titleHomeCard">{el.data.title}</h4>
                       {text ? <p className="textHomeCard">{text}</p> : null}
-                      {el.data.url ? (
-                        <img src={el.data.url} className="picHomeCardBody" />
+                      {getMedia(el.data.url) == "i" ? (
+                        <img
+                          src={el.data.url}
+                          className="picAndVidHomeCardBody"
+                        />
+                      ) : getMedia(el.data.url) == "v" ? (
+                        <video
+                          src={el.data.media.reddit_video.fallback_url}
+                          autoPlay
+                          muted
+                          controls
+                          className="picAndVidHomeCardBody"
+                        ></video>
                       ) : null}
                       <div className="bottomHomeCard">
                         <img className="picBottomHomeCard" src={comment} />

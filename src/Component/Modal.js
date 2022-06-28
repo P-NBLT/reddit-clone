@@ -4,17 +4,22 @@ import Article from "../page/Article";
 
 const MODAL_STYLE = {
   position: "absolute",
-  top: 0,
-  left: "10%",
+  //   top: 0,
+  //   left: "10%",
+  //   marginRight: "20%",
   zIndex: 1000,
-  height: "100%",
+  marginLeft: "20%",
+  marginRight: "20%",
+  top: 0,
+  left: 0,
+  right: 0,
+  //   border: "1px solid yellow",
+  //   backgroundColor: "#dae0e6",
+  //   minWidth: "1000px",
 };
 
 const OVERFLOW_STYLE = {
   position: "fixed",
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   alignItems: "center",
   top: "0",
   left: "0",
   width: "100%",
