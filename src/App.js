@@ -13,36 +13,22 @@ import Article from "./page/Article";
 import Error from "./Error";
 
 function App() {
-
   return (
-<<<<<<< HEAD
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
-          <Route path="r/:subId" element={<Subreddit />}>
-            <Route path=":permalinkId" element={<Article />} />
-          </Route>
-        </Route>
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
-=======
     <ChakraProvider>
       <BrowserRouter>
-        <NavBar />
         <Routes>
-            {/* <Route path="/" element={<SharedLayout />} />  */}
+          <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path="r/:permalinkId" element={<Subreddit />} />
-            <Route  path="search/" element={<SearchPage />} />
-            <Route path='/r/:id1/comments/:id2/:id3/' element={<Card />} />
-          </Routes>
-        
+            <Route path="r/:subId" element={<Subreddit />}>
+              <Route path=":permalinkId" element={<Article />} />
+            </Route>
+            <Route path="search/" element={<SearchPage />} />
+            <Route path="/r/:id1/comments/:id2/:id3/" element={<Card />} />
+          </Route>
+          <Route path="*" element={<Error />} />
+        </Routes>
       </BrowserRouter>
-
     </ChakraProvider>
->>>>>>> 9d0faa4f48940de623c5c6a4712f582f8b16ca34
   );
 }
 
