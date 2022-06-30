@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function SearchCard(props) {
-  const [open, setOpen] = useState(false);
+  
   console.log(props.per);
   const permalink = props.per;
-  const handleClick = () => {
-    setOpen(true);
-  };
+  
 
   return (
-    <Link to={permalink} onClick={handleClick}>
+    <Link to={permalink} >
       <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]">
         <div className="flex flex-col border-[0.4px] border-gray-400 bg-white mx-2 my-1 rounded">
           <div className="flex justify-between">
@@ -21,7 +19,7 @@ export default function SearchCard(props) {
               <p className="font-semibold pb-20 pt-2">{props.title}</p>
             </div>
             <div className="mid  mx-2 mt-10">
-              <img src={props.thumbnail} className="rounded" />
+              {props.thumbnail && <img src={props.thumbnail} className="rounded w-[150px]" />}
             </div>
           </div>
           <div className="bottom flex space-x-2 mx-2">

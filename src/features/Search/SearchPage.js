@@ -19,48 +19,34 @@ export default function SearchPage() {
   const load = useSelector(selectLoad);
   console.log(dataOfSearch);
   const location = useLocation();
-  const [isopen, setisOpen] = useState(false);
+  
   const navigate = useNavigate();
-  const [close, setOnClose] = useState(false);
+  
 
   console.log(location.search);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchSearchResults(location.search));
-    console.log(isopen);
+    
   }, [location.search]);
-  console.log(isopen);
+  
   console.log(dataOfSearch);
-  const handleDiv = () => {
-    // setisOpen(true)
-    console.log("yes");
-  };
+  
   if (load) {
     return (
       <>
-        <div className="bg-gray-300">
+        <div className=" ml-[15%] mt-[1.5%] ">
           <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]">
-            <div className="buttons flex justify-start space-x-6 pt-10 ">
-              <button
-                className="rounded-3xl w-16 py-[7px] bg-white font-semibold hover:bg-gray-100"
-                onClick={() => {
-                  setisOpen(true);
-                }}
-              >
-                Posts
-              </button>
-              {/* <button className='rounded-3xl w-24 py-[7px]  font-semibold hover:bg-gray-100 active:bg-white' onClick={commentsHandler}>Comments</button>
-                        <button className='rounded-3xl w-28 py-[7px]  font-semibold hover:bg-gray-100 active:bg-white'>Communities</button>
-                        <button className='rounded-3xl w-16 py-[7px]  font-semibold hover:bg-gray-100 active:bg-white'>People</button> */}
-            </div>
+            
+            
           </div>
 
-          <div className="pt-10">
+          <div className="">
             {dataOfSearch.children &&
               dataOfSearch.children
                 .map((e, i) => {
                   return (
-                    <div onClick={handleDiv} key={i}>
+                    <div  key={i}>
                       <SearchCard
                         title={e.data.title}
                         ups={e.data.ups}
@@ -78,7 +64,7 @@ export default function SearchPage() {
                 .slice(0, 10)}
           </div>
         </div>
-        {isopen && <Modal setOnClose={setOnClose} setisOpen={setisOpen} />}
+        
       </>
     );
   }
