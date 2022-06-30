@@ -1,6 +1,10 @@
 .link {
   text-decoration: none;
   color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .categoryTextTitle {
@@ -11,6 +15,7 @@
 .categoryPic {
   width: 20px;
   height: 20px;
+  /* margin-right: 0px; */
 }
 
 .categoryCardContainer {
@@ -25,6 +30,10 @@
 }
 
 .categoryTopicContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-top: 5px;
   width: 80px;

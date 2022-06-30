@@ -4,6 +4,7 @@ import Article from "../page/Article";
 
 const MODAL_STYLE = {
   position: "absolute",
+  display: "block",
   //   top: 0,
   //   left: "10%",
   //   marginRight: "20%",
@@ -14,7 +15,7 @@ const MODAL_STYLE = {
   left: 0,
   right: 0,
   //   border: "1px solid yellow",
-  //   backgroundColor: "#dae0e6",
+  // backgroundColor: "#dae0e6",
   //   minWidth: "1000px",
 };
 

@@ -25,7 +25,6 @@ export const getFilteredSubredditData = createAsyncThunk(
       `https://www.reddit.com/r/${obj.topic}/${obj.option}.json`
     );
     const response = await getData.json();
-    console.log("response", response);
     return response;
   }
 );

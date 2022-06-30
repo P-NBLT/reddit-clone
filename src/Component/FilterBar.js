@@ -19,7 +19,6 @@ const FilterBar = () => {
   const handleClick = (e) => {
     const pastId = document.querySelector(".active").id;
     let id = e.target.id;
-
     const getSrc = document.getElementById(id).firstChild;
     const getClass = document.querySelector(".active").firstChild.src;
     document.querySelector(".active").firstChild.src =
@@ -51,6 +50,7 @@ const FilterBar = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (topic && option) {
+        console.log("happening to many timeeeee");
         dispatch(getFilteredSubredditData({ topic, option }));
       }
     };
@@ -72,7 +72,7 @@ const FilterBar = () => {
         <img src={top} id="top" />
         <p id="top">Top</p>
       </button>
-      <button className="filterBarButton dot" onClick={handleClick} id="dot">
+      <button className="filterBarButton dot" id="dot">
         <img src={dot} id="dot" />
       </button>
     </div>

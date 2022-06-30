@@ -3,11 +3,12 @@ import Login from "../page/Login";
 import ReactDOM from "react-dom";
 
 const MODAL_STYLE = {
-  position: "absolute",
+  position: "fixed",
   top: 0,
   left: "10%",
   zIndex: 2000,
   height: "100%",
+
   //   backgroundColor: "white",
 };
 
@@ -19,7 +20,8 @@ const OVERFLOW_STYLE = {
   height: "100%",
   backgroundColor: "rgba(0,0,0, .7)",
   zIndex: "2000",
-  overflowY: "auto",
+  margin: "0",
+  // overflowY: "auto",
 };
 
 const ModalLogin = ({ open, onClose }, children) => {

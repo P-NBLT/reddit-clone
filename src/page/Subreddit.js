@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Subreddit.css";
-import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   actionsCategory,
   getSubredditData,
@@ -14,7 +14,6 @@ import comment from "../Media/comment-svg.svg";
 import save from "../Media/save.svg";
 import dot from "../Media/dot.svg";
 import { articleActions } from "../Component/ArticleSlice";
-import Article from "./Article";
 import Modal from "../Component/Modal";
 
 const Subreddit = () => {
@@ -53,16 +52,17 @@ const Subreddit = () => {
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
+
   console.log("open", isOpen);
   if (!isOpen) {
     return (
-      <>
+      <div className="subredditContainerMaster">
+        <div className="filterBar">
+          <FilterBar />
+        </div>
         {status == "succes" ? (
           <div className="subredditContainer">
             {/* <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal> */}
-            <div>
-              <FilterBar />
-            </div>
             {data
               ? data.data.children.map((el, idx) => {
                   let text;
@@ -150,8 +150,7 @@ const Subreddit = () => {
                     </Link>
                   );
                 })
-              : null}
-            //{" "}
+              : null}{" "}
           </div>
         ) : (
           <div className="imageLoading">
@@ -163,7 +162,7 @@ const Subreddit = () => {
             <p>Loading...</p>
           </div>
         )}
-      </>
+      </div>
     );
   } else
     return (
@@ -175,8 +174,6 @@ const Subreddit = () => {
           }}
           open={isOpen}
         ></Modal>
-        <div>Subreddit</div>
-        <FilterBar />
       </div>
     );
 };

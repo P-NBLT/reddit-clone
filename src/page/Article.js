@@ -266,7 +266,7 @@ const Article = ({ open, onClose }) => {
                     </div>
                     <div className="logginForCommentsContainer">
                       <p>Login or sign up to leave a comment</p>
-                      <div>
+                      <div className="loggingForCommentsButton">
                         <button
                           onClick={() => setIsOpen(true)}
                           className="login"
@@ -282,117 +282,125 @@ const Article = ({ open, onClose }) => {
                       </div>
                     </div>
                     <div className="commentArticleCard">
-                      {data[1].data.children.map((el, idx) => {
-                        let time;
-                        const year =
-                          new Date().getFullYear() -
-                          new Date(el.data.created * 1000).getFullYear();
-                        const month =
-                          new Date().getMonth() -
-                          new Date(el.data.created * 1000).getMonth();
-                        const day =
-                          new Date().getDay() -
-                          new Date(el.data.created * 1000).getDay();
-                        const hour =
-                          new Date().getHours() -
-                          new Date(el.data.created * 1000).getHours();
-                        const minute =
-                          new Date().getMinutes() -
-                          new Date(el.data.created * 1000).getMinutes();
+                      {data[1].data.children.length != 0 ? (
+                        data[1].data.children.map((el, idx) => {
+                          let time;
+                          const year =
+                            new Date().getFullYear() -
+                            new Date(el.data.created * 1000).getFullYear();
+                          const month =
+                            new Date().getMonth() -
+                            new Date(el.data.created * 1000).getMonth();
+                          const day =
+                            new Date().getDay() -
+                            new Date(el.data.created * 1000).getDay();
+                          const hour =
+                            new Date().getHours() -
+                            new Date(el.data.created * 1000).getHours();
+                          const minute =
+                            new Date().getMinutes() -
+                            new Date(el.data.created * 1000).getMinutes();
 
-                        if (year > 1) {
-                          time = year.toString() + " years ago";
-                        } else if (year > 0) {
-                          time = year.toString() + " year ago";
-                        } else if (month > 1) {
-                          time = month.toString() + " months ago";
-                        } else if (month > 0) {
-                          time = month.toString() + " month ago";
-                        } else if (day > 1) {
-                          time = day.toString() + " days ago";
-                        } else if (day > 0) {
-                          time = day.toString() + "day ago";
-                        } else if (hour > 1) {
-                          time = hour.toString() + " hours ago";
-                        } else if (hour > 0) {
-                          time = hour.toString() + " hour ago";
-                        } else if (minute > 1) {
-                          time = minute.toString() + " minutes ago";
-                        } else if (minute > 0) {
-                          time = minute.toString() + " minute ago";
-                        } else {
-                          time = "now";
-                        }
+                          if (year > 1) {
+                            time = year.toString() + " years ago";
+                          } else if (year > 0) {
+                            time = year.toString() + " year ago";
+                          } else if (month > 1) {
+                            time = month.toString() + " months ago";
+                          } else if (month > 0) {
+                            time = month.toString() + " month ago";
+                          } else if (day > 1) {
+                            time = day.toString() + " days ago";
+                          } else if (day > 0) {
+                            time = day.toString() + "day ago";
+                          } else if (hour > 1) {
+                            time = hour.toString() + " hours ago";
+                          } else if (hour > 0) {
+                            time = hour.toString() + " hour ago";
+                          } else if (minute > 1) {
+                            time = minute.toString() + " minutes ago";
+                          } else if (minute > 0) {
+                            time = minute.toString() + " minute ago";
+                          } else {
+                            time = "now";
+                          }
 
-                        return (
-                          <div key={idx} className="commentCard">
-                            <div>
-                              <div className="topCommentCard">
-                                <p>{el.data.author}</p>
-                                <p className="timeCommentCard">· {time}</p>
-                              </div>
-                              <p className="commentBodyAnswer">
-                                {el.data.body}
-                              </p>
-                              <div className="bottomCommentCard">
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    <img src={arrowUp} />
-                                  </button>
+                          return (
+                            <div key={idx} className="commentCard">
+                              <div>
+                                <div className="topCommentCard">
+                                  <p>{el.data.author}</p>
+                                  <p className="timeCommentCard">· {time}</p>
                                 </div>
-                                <p className="scoreCommentCard">
-                                  {el.data.score}
+                                <p className="commentBodyAnswer">
+                                  {el.data.body}
                                 </p>
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    <img src={arrowDown} />
-                                  </button>
-                                </div>
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    {" "}
-                                    <img src={comment} />
-                                    <p> Reply</p>
-                                  </button>
-                                </div>
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    <p>Save</p>
-                                  </button>
-                                </div>
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    <p>Hide</p>
-                                  </button>
-                                </div>
-                                <div>
-                                  <button
-                                    onClick={() => setIsOpen(true)}
-                                    className="buttonCommentCard"
-                                  >
-                                    <p>Report</p>
-                                  </button>
+                                <div className="bottomCommentCard">
+                                  <div>
+                                    <button
+                                      onClick={() => setIsOpen(true)}
+                                      className="buttonCommentCard"
+                                    >
+                                      <img src={arrowUp} />
+                                    </button>
+                                  </div>
+                                  <p className="scoreCommentCard">
+                                    {el.data.score}
+                                  </p>
+                                  <div>
+                                    <button
+                                      onClick={() => setIsOpen(true)}
+                                      className="buttonCommentCard"
+                                    >
+                                      <img src={arrowDown} />
+                                    </button>
+                                  </div>
+                                  <div className="bottomLeftButtonCard">
+                                    <div>
+                                      <button
+                                        onClick={() => setIsOpen(true)}
+                                        className="buttonCommentCard"
+                                      >
+                                        {" "}
+                                        <img src={comment} />
+                                        <p> Reply</p>
+                                      </button>
+                                    </div>
+                                    <div>
+                                      <button
+                                        onClick={() => setIsOpen(true)}
+                                        className="buttonCommentCard"
+                                      >
+                                        <p>Save</p>
+                                      </button>
+                                    </div>
+                                    <div>
+                                      <button
+                                        onClick={() => setIsOpen(true)}
+                                        className="buttonCommentCard"
+                                      >
+                                        <p>Hide</p>
+                                      </button>
+                                    </div>
+                                    <div>
+                                      <button
+                                        onClick={() => setIsOpen(true)}
+                                        className="buttonCommentCard"
+                                      >
+                                        <p>Report</p>
+                                      </button>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })
+                      ) : (
+                        <div className="noComment">
+                          <p>No comment</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="articleCategoryCard">
@@ -573,7 +581,7 @@ const Article = ({ open, onClose }) => {
                 </div>
                 <div className="logginForCommentsContainer">
                   <p>Login or sign up to leave a comment</p>
-                  <div>
+                  <div className="loggingForCommentsButton">
                     <button onClick={() => setIsOpen(true)} className="login">
                       Log in
                     </button>
@@ -654,39 +662,41 @@ const Article = ({ open, onClose }) => {
                                   <img src={arrowDown} />
                                 </button>
                               </div>
-                              <div>
-                                <button
-                                  onClick={() => setIsOpen(true)}
-                                  className="buttonCommentCard"
-                                >
-                                  {" "}
-                                  <img src={comment} />
-                                  <p> Reply</p>
-                                </button>
-                              </div>
-                              <div>
-                                <button
-                                  onClick={() => setIsOpen(true)}
-                                  className="buttonCommentCard"
-                                >
-                                  <p>Save</p>
-                                </button>
-                              </div>
-                              <div>
-                                <button
-                                  onClick={() => setIsOpen(true)}
-                                  className="buttonCommentCard"
-                                >
-                                  <p>Hide</p>
-                                </button>
-                              </div>
-                              <div>
-                                <button
-                                  onClick={() => setIsOpen(true)}
-                                  className="buttonCommentCard"
-                                >
-                                  <p>Report</p>
-                                </button>
+                              <div className="bottomLeftButtonCard">
+                                <div>
+                                  <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="buttonCommentCard"
+                                  >
+                                    {" "}
+                                    <img src={comment} />
+                                    <p> Reply</p>
+                                  </button>
+                                </div>
+                                <div>
+                                  <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="buttonCommentCard"
+                                  >
+                                    <p>Save</p>
+                                  </button>
+                                </div>
+                                <div>
+                                  <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="buttonCommentCard"
+                                  >
+                                    <p>Hide</p>
+                                  </button>
+                                </div>
+                                <div>
+                                  <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="buttonCommentCard"
+                                  >
+                                    <p>Report</p>
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>

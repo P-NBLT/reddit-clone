@@ -1,9 +1,6 @@
-body {
-  background-color: rgba(218, 224, 230, 255);
-}
-
 .categorySharedLayout {
   display: flex;
+
   padding-left: 0px;
   margin-left: 2.5%;
   margin-right: 15%;

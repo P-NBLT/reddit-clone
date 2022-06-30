@@ -47,79 +47,79 @@ const Categories = () => {
   };
   return (
     <div className="categoryCardContainer">
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/home/" className="link">
           <img src={homePic} className="categoryPic" />
           <p className="categoryTextTitle">Home</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/funny/" className="link">
           <img src={funnyPic} className="categoryPic" />
           <p className="categoryTextTitle">Enterta</p>
         </Link>
       </div>
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/worldnews/" className="link">
           <img src={newsPic} className="categoryPic" />
           <p className="categoryTextTitle">World News</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/gaming/" className="link">
           <img src={gamingPic} className="categoryPic" />
           <p className="categoryTextTitle">Gaming</p>
         </Link>
       </div>
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/aww/" className="link">
           <img src={cutePic} className="categoryPic" />
           <p className="categoryTextTitle">Cute Pics</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/memes/" className="link">
           <img src={memesPic} className="categoryPic" />
           <p className="categoryTextTitle">Memes</p>
         </Link>
       </div>
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/movies/" className="link">
           <img src={moviesPic} className="categoryPic" />
           <p className="categoryTextTitle">Movies</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/science/" className="link">
           <img src={sciencePic} className="categoryPic" />
           <p className="categoryTextTitle">Science</p>
         </Link>
       </div>
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/space/" className="link">
           <img src={spacePic} className="categoryPic" />
           <p className="categoryTextTitle">Space</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/technology/" className="link">
           <img src={techPic} className="categoryPic" />
           <p className="categoryTextTitle">Technology</p>
         </Link>
       </div>
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/sports/" className="link">
           <img src={sportsPic} className="categoryPic" />
           <p className="categoryTextTitle">Sports</p>
         </Link>
       </div>
 
-      <div onClick={handleClick}>
+      <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/food" className="link">
           <img src={foodPic} className="categoryPic" />
           <p className="categoryTextTitle">Food</p>

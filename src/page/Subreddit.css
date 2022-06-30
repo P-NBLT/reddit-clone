@@ -1,12 +1,21 @@
+.subredditContainerMaster {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5%;
+  margin-left: 15%;
+  min-width: 741px;
+}
+
 .LinkSubredditCard {
   text-decoration: none;
   color: black;
 }
 
 .subredditContainer {
-  margin-top: 1.5%;
+  /* margin-top: 1.5%;
   margin-left: 15%;
-  min-width: 741px;
+  min-width: 741px; */
+  max-width: 100%;
 }
 
 .subbreditCard {
@@ -135,19 +144,19 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .subredditContainer {
+  .subredditContainerMaster {
     width: 1930px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .subredditContainer {
+  .subredditContainerMaster {
     margin-left: 12%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .subredditContainer {
+  .subredditContainerMaster {
     min-width: 60%;
   }
 }
