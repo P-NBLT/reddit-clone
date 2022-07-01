@@ -26,7 +26,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getMedia = (url) => {
-    return url.replace(new RegExp(`(https://)(.)(\.*$)`), "$2");
+    return url.replace(new RegExp(`(https://)(.)(\.redd)(\.*$)`), "$2");
   };
 
   const handleScore = (e) => {
