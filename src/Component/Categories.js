@@ -30,7 +30,7 @@ const Categories = () => {
 
     let test;
     switch (word) {
-      case "entertainement":
+      case "fun":
         word = "funny";
         break;
       case "world news":
@@ -57,7 +57,7 @@ const Categories = () => {
       <div className="categoryTopicContainer" onClick={handleClick}>
         <Link to="r/funny/" className="link">
           <img src={funnyPic} className="categoryPic" />
-          <p className="categoryTextTitle">Enterta</p>
+          <p className="categoryTextTitle">Fun</p>
         </Link>
       </div>
       <div className="categoryTopicContainer" onClick={handleClick}>

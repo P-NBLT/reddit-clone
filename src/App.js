@@ -11,6 +11,7 @@ import SharedLayout from "./page/SharedLayout";
 import Subreddit from "./page/Subreddit";
 import Article from "./page/Article";
 import Error from "./Error";
+import ModalSearch from "./features/Search/ModalSearch";
 
 function App() {
   return (
@@ -23,7 +24,10 @@ function App() {
               <Route path=":permalinkId" element={<Article />} />
             </Route>
             <Route path="search/" element={<SearchPage />} />
-            <Route path="/r/:id1/comments/:id2/:id3/" element={<Card />} />
+            <Route
+              path="/r/:id1/comments/:id2/:id3/"
+              element={<ModalSearch />}
+            />
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>

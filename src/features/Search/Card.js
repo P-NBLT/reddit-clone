@@ -6,6 +6,7 @@ import {
   fetchCardDetails,
   selectDataForCard,
   selectLoadForCard,
+  cardActions,
 } from "./CardsSlice";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import downArrowPic from "../../Media/arrow-down.svg";
@@ -40,6 +41,7 @@ export default function Card() {
   }, []);
 
   const closeHandler = () => {
+    dispatch(cardActions.updateModal());
     navigate(-1);
   };
 

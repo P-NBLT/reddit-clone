@@ -17,36 +17,30 @@ export default function SearchPage() {
   const dataOfSearch = useSelector(selectData);
   const [type, setType] = useState("posts");
   const load = useSelector(selectLoad);
-  console.log(dataOfSearch);
   const location = useLocation();
-  
-  const navigate = useNavigate();
-  
 
-  console.log(location.search);
+  const navigate = useNavigate();
+
+  // console.log(location.search);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchSearchResults(location.search));
-    
   }, [location.search]);
-  
-  console.log(dataOfSearch);
-  
+
+  // console.log(dataOfSearch);
+
   if (load) {
     return (
       <>
         <div className=" ml-[15%] mt-[1.5%] ">
-          <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]">
-            
-            
-          </div>
+          <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]"></div>
 
           <div className="">
             {dataOfSearch.children &&
               dataOfSearch.children
                 .map((e, i) => {
                   return (
-                    <div  key={i}>
+                    <div key={i}>
                       <SearchCard
                         title={e.data.title}
                         ups={e.data.ups}
@@ -64,21 +58,7 @@ export default function SearchPage() {
                 .slice(0, 10)}
           </div>
         </div>
-        
       </>
     );
   }
-  // else {
-  //     return(
-
-  //     <div>
-  //         <Modal onClose={() => {
-  //
-
-  //         }} open={isopen}>
-  //         </Modal>
-  //         <p>Yikesss</p>
-  //     </div>
-  //     )
-  // }
 }
