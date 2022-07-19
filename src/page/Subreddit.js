@@ -52,8 +52,8 @@ const Subreddit = () => {
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
-
-  console.log("open", isOpen);
+  console.log("pape veut voir la data ", data);
+  // console.log("open", isOpen);
   if (!isOpen) {
     return (
       <div className="subredditContainerMaster">
