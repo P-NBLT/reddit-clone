@@ -21,7 +21,7 @@ import techPic from "../Media/tech-pic.png";
 const Categories = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  console.log(location);
+  
 
   const handleClick = (e) => {
     let word = e.target.parentElement

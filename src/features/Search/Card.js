@@ -47,7 +47,7 @@ export default function Card() {
 
   if (load) {
     return (
-      <div className="bg-gray-800">
+      <div className="">
         <div className="bg-gray-300 w-[800px] lg:w-[600px] mx-auto md:w-[500px] sm:w-[400px] xsm:w-[360px]">
           {/* */}
           {/* Top section */}
@@ -93,10 +93,10 @@ export default function Card() {
               <img src={downArrowPic} width="18" />
             </div>
             <div className="main flex flex-col">
-              <p className="text-xs font-bold pb-4">
+              <p className="text-xs font-bold ">
                 {data[0].data.children[0].data.subreddit_name_prefixed}
               </p>
-              <p className="font-semibold text-lg">
+              <p className="font-semibold text-lg mb-4">
                 {data[0].data.children[0].data.title}
               </p>
               <div className="flex justify-center w-[600px] lg:w-[400px] sm:w-[300px] xsm:w-[250px]">
@@ -108,7 +108,7 @@ export default function Card() {
                       </p>
                     </a>
                   ) : data[0].data.children[0].data.post_hint == "image" ? (
-                    <img src={data[0].data.children[0].data.url} className="" />
+                    <img src={data[0].data.children[0].data.url} className="w-[400px]" />
                   ) : (
                     <video controls autoPlay className="">
                       <source

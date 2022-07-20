@@ -17,7 +17,7 @@ export default function SearchCard(props) {
 
   return (
     <Link to={permalink} onClick={handleClick}>
-      <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]">
+      <div className="w-[800px] mx-auto lg:w-[580px] md:w-[550px] sm:w-[390px] xsm:w-[310px] ">
         <div className="flex flex-col border-[0.4px] border-gray-400 bg-white mx-2 my-1 rounded">
           <div className="flex justify-between">
             <div className="top flex mx-2 flex-col py-1 w-3/4">

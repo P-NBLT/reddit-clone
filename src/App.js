@@ -15,6 +15,7 @@ import ModalSearch from "./features/Search/ModalSearch";
 
 function App() {
   return (
+    
     <ChakraProvider>
       <BrowserRouter>
         <Routes>

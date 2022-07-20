@@ -25,16 +25,19 @@ export default function DrawerHam() {
                     <DrawerHeader><p className='font-bold text-2xl'>Reddit Catogories</p></DrawerHeader>
 
 
-                    <DrawerBody>
-                        <p className='font-serif text-lg py-2'>Home</p>
-                        <Divider />
-                        <p className='font-serif text-lg py-2'>World News</p>
-                        <Divider />
-                        <p className='font-serif text-lg py-2'>Entertainement</p>
-                        <Divider />
-                        <p className='font-serif text-lg py-2'>Gaming</p>
-                        <Divider />
-                        <p className='font-serif text-lg py-2'>Cute Pics</p>
+                    <DrawerBody >
+                        <p className='px-2 font-semibold text-lg py-2 '>Home</p>                 
+                        <p className='px-2 font-semibold text-lg py-2'>Fun</p>
+                        <p className='px-2 font-semibold text-lg py-2'>World News</p>
+                        <p className='px-2 font-semibold text-lg py-2'>Gaming</p>
+                        <p className='px-2 font-semibold  text-lg py-2'>Cute Pics</p>
+                        <p className='px-2 font-semibold text-lg py-2'>Memes</p>
+                        <p className='px-2 font-semibold text-lg py-2'>Movies</p>
+                        <p className='px-2 font-semibold text-lg py-2'>Science</p>
+                        <p className='px-2 font-semibold  text-lg py-2'>Space</p>
+                        <p className='px-2 font-semibold  text-lg py-2'>Technology</p>
+                        <p className='px-2 font-semibold  text-lg py-2'>Sports</p>
+                        <p className='px-2 font-semibold text-lg py-2'>Food</p>
                     </DrawerBody>
 
                     {/* <DrawerFooter>

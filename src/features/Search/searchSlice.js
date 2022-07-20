@@ -18,6 +18,7 @@ export const searchSlice = createSlice({
     extraReducers:{
         [fetchSearchResults.pending]:(state,action)=>{
             console.log('Data is loading')
+            state.load = false
         },
         [fetchSearchResults.fulfilled]:(state,action)=>{
             state.data = action.payload

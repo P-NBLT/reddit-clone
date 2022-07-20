@@ -12,6 +12,7 @@ import CommentsPage from "./CommentsPage";
 import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
 import Card from "./Card";
+import image_not_available from '../../Media/image_not_available.jpg'
 
 export default function SearchPage() {
   const dataOfSearch = useSelector(selectData);
@@ -33,9 +34,9 @@ export default function SearchPage() {
     return (
       <>
         <div className=" ml-[15%] mt-[1.5%] ">
-          <div className="w-[800px] mx-auto lg:w-[700px] md:w-[600px] sm:w-[450px] xsm:w-[360px]"></div>
+          
 
-          <div className="">
+          <div className=" ">
             {dataOfSearch.children &&
               dataOfSearch.children
                 .map((e, i) => {
@@ -47,7 +48,7 @@ export default function SearchPage() {
                         subreddit={e.data.subreddit}
                         subredditName={e.data.subreddit_name_prefixed}
                         awards={e.data.total_awards_received}
-                        thumbnail={e.data.thumbnail}
+                        thumbnail={e.data.thumbnail!='self' && e.data.thumbnail!='default'?e.data.thumbnail:image_not_available}
                         width={e.data.thumbnail_width}
                         height={e.data.thumbnail_height}
                         per={e.data.permalink}
