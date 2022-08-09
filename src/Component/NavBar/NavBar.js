@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalLogin from "../ModalLogin";
+import logo from '../../Media/logo.png'
 
 export default function NavBar() {
   const [text, setText] = useState("");
@@ -69,7 +70,7 @@ export default function NavBar() {
             </Link>
             <Link to="/">
               <div className="reddit-name lg:hidden">
-                <svg
+                {/* <svg
                   className="_1bWuGs_1sq4Pqy099x_yy- w-14"
                   viewBox="0 0 57 18"
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +89,8 @@ export default function NavBar() {
                     <path d="M17.27,12.44a1.49,1.49,0,0,0,1.59-1.38v-.15a4.81,4.81,0,0,0-.1-.85A5.83,5.83,0,0,0,13.25,5.3c-3.1,0-5.69,2.85-5.69,6.35S10.11,18,13.25,18a5.66,5.66,0,0,0,4.39-1.84,1.23,1.23,0,0,0-.08-1.74l-.11-.09a1.29,1.29,0,0,0-1.58.17,3.91,3.91,0,0,1-2.62,1.12A3.54,3.54,0,0,1,10,12.44h7.27Zm-4-4.76a3.41,3.41,0,0,1,3.09,2.64H10.14A3.41,3.41,0,0,1,13.24,7.68Z"></path>
                     <path d="M7.68,6.53a1.19,1.19,0,0,0-1-1.18A4.56,4.56,0,0,0,2.39,6.91V6.75A1.2,1.2,0,0,0,0,6.75v9.77a1.23,1.23,0,0,0,1.12,1.24,1.19,1.19,0,0,0,1.26-1.1.66.66,0,0,0,0-.14v-5A3.62,3.62,0,0,1,5.81,7.7a4.87,4.87,0,0,1,.54,0h.24A1.18,1.18,0,0,0,7.68,6.53Z"></path>
                   </g>
-                </svg>
+                </svg> */}
+                <img src={logo} className='w-20'/>
               </div>
             </Link>
           </div>
