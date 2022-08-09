@@ -10,7 +10,7 @@ import {
 } from "./CardsSlice";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import downArrowPic from "../../Media/arrow-down.svg";
-import uppArrowPic from "../../Media/uppArrowPic.png";
+import uppArrowPic from "../../Media/arrow-up.svg";
 import whiteDown from "../../Media/whiteDown.png";
 import whiteUp from "../../Media/whiteUp.png";
 import { Input, InputGroup, InputRightElement, Button } from "@chakra-ui/react";
@@ -108,7 +108,10 @@ export default function Card() {
                       </p>
                     </a>
                   ) : data[0].data.children[0].data.post_hint == "image" ? (
-                    <img src={data[0].data.children[0].data.url} className="w-[400px]" />
+                    <img
+                      src={data[0].data.children[0].data.url}
+                      className="w-[400px]"
+                    />
                   ) : (
                     <video controls autoPlay className="">
                       <source
