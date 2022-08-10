@@ -11,8 +11,8 @@ import {
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import downArrowPic from "../../Media/arrow-down.svg";
 import uppArrowPic from "../../Media/arrow-up.svg";
-import whiteDown from "../../Media/whiteDown.png";
-import whiteUp from "../../Media/whiteUp.png";
+import whiteDown from "../../Media/whiteDown.svg";
+import whiteUp from "../../Media/whiteUp.svg";
 import { Input, InputGroup, InputRightElement, Button } from "@chakra-ui/react";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
