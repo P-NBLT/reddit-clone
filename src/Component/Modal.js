@@ -35,7 +35,7 @@ const Modal = ({ onClose, open }, children) => {
   if (!open) return null;
   return ReactDOM.createPortal(
     <>
-      {/* <div className="overflow" onClick={onClose} /> */}
+      <div className="overflow" onClick={onClose} />
       <div className="modal">
         <Article onClose={onClose} open={open} />
       </div>

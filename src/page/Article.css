@@ -470,16 +470,21 @@ img {
 
 @media screen and (max-width: 630px) {
   .headerArticleCard {
-    width: auto;
+    width: 100vw;
   }
   .leftHeaderArticleCard {
     margin-left: 5px;
   }
-  .articleAndCommentsContainer {
+  .articleAndCommentsContainerMaster {
     margin-left: 10px;
+    margin-right: 10px;
+  }
+  .articleAndCommentsContainer {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .scoreArticleCard {
-    font-size: 14px;
+    font-size: 13px;
   }
   .bottomLeftArticleCard {
     column-gap: 15px;
@@ -488,12 +493,30 @@ img {
   }
   .logginForCommentsContainer {
     margin-left: 30px;
+    flex-direction: column;
     row-gap: 10px;
+  }
+  .loggingForCommentsButton {
+    row-gap: 10px;
+    column-gap: 15px;
+    margin: 2px 0px;
   }
   .login {
     width: 93px;
   }
   .signup {
     width: 93px;
+  }
+  .bottomCommentCard {
+    row-gap: 10px;
+  }
+  .scoreCommentCard {
+    font-size: 13px;
+  }
+  .articleCategoryCard {
+    display: none;
+  }
+  .moveToTopArticleCard {
+    display: none;
   }
 }
