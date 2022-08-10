@@ -179,9 +179,15 @@
     height: 250px;
   }
 }
+
 @media screen and (max-width: 630px) {
+  .subredditContainerMaster {
+    width: 100%;
+    margin-left: 0%;
+  }
   .picAndVidSubbreditCardBody {
     width: 200px;
     height: 200px;
+    margin: 10%;
   }
 }

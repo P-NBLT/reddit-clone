@@ -17,6 +17,12 @@
   }
 } */
 
+@media screen and (max-width: 630px) {
+  .categorySharedLayout {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .categorySharedLayout {
     min-width: 200px;

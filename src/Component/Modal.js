@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Article from "../page/Article";
+import "./Modal.css";
 
 const MODAL_STYLE = {
   position: "absolute",
@@ -34,8 +35,8 @@ const Modal = ({ onClose, open }, children) => {
   if (!open) return null;
   return ReactDOM.createPortal(
     <>
-      <div style={OVERFLOW_STYLE} onClick={onClose} />
-      <div style={MODAL_STYLE}>
+      {/* <div className="overflow" onClick={onClose} /> */}
+      <div className="modal">
         <Article onClose={onClose} open={open} />
       </div>
     </>,
