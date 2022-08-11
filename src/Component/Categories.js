@@ -21,14 +21,12 @@ import techPic from "../Media/tech-pic.png";
 const Categories = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  
 
   const handleClick = (e) => {
     let word = e.target.parentElement
       .getElementsByTagName("p")[0]
       .textContent.toLowerCase();
 
-    let test;
     switch (word) {
       case "fun":
         word = "funny";
