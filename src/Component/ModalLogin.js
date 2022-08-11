@@ -1,34 +1,13 @@
 import React from "react";
 import Login from "../page/Login";
 import ReactDOM from "react-dom";
-
-const MODAL_STYLE = {
-  position: "fixed",
-  top: 0,
-  left: "10%",
-  zIndex: 2000,
-  height: "100%",
-
-  //   backgroundColor: "white",
-};
-
-const OVERFLOW_STYLE = {
-  position: "fixed",
-  top: "0",
-  left: "0",
-  width: "100%",
-  height: "100%",
-  backgroundColor: "rgba(0,0,0, .7)",
-  zIndex: "2000",
-  margin: "0",
-  // overflowY: "auto",
-};
+import "./ModalLogin.css";
 
 const ModalLogin = ({ open, onClose }, children) => {
   return ReactDOM.createPortal(
     <>
-      <div style={OVERFLOW_STYLE} />
-      <div style={MODAL_STYLE}>
+      <div className="overflowLogin" />
+      <div className="modalLogin">
         <Login onClose={onClose} open={open} />
       </div>
     </>,

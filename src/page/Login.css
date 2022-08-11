@@ -118,3 +118,13 @@
   width: 100%;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 620px) {
+  .loginContainer {
+    width: 100vw;
+    margin: 0px;
+  }
+  .secondPartRightLoginCard {
+    margin-right: 10%;
+  }
+}
