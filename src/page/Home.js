@@ -102,6 +102,8 @@ const Home = () => {
                           autoPlay
                           muted
                           controls
+                          webkit-playsinline
+                          playsinline
                           className="picAndVidHomeCardBody"
                         ></video>
                       ) : null}

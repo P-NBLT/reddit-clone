@@ -122,6 +122,8 @@ const Subreddit = () => {
                               autoPlay
                               muted
                               controls
+                              webkit-playsinline
+                              playsinline
                               className="picAndVidSubbreditCardBody"
                             ></video>
                           ) : null}
