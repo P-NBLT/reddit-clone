@@ -216,12 +216,12 @@ export default function Card() {
               <div>
                 <p>Log in or sign up to leave a comment</p>
               </div>
-              <div>
-                <button className=" font-semibold border-2 border-blue-500 rounded-2xl w-24 text-blue-500 p-[2px] mx-1 hover:bg-blue-100">
+              <div className="flex">
+                <button className=" font-semibold border-2 border-blue-500 rounded-2xl w-24 text-blue-500 p-[2px] mx-1 hover:bg-blue-100 xsm:w-14 xsm:p-[0px] xsm:text-xs xsm:h-8">
                   Log In
                 </button>
                 {/* <LoginPage /> */}
-                <button className="bg-blue-500 text-white w-24 rounded-2xl border-2 border-blue-500 p-[2px] font-semibold hover:bg-blue-400">
+                <button className="bg-blue-500 text-white w-24 rounded-2xl border-2 border-blue-500 p-[2px] font-semibold hover:bg-blue-400 xsm:w-14 xsm:p-[0px] xsm:text-xs xsm:h-8">
                   Sign Up
                 </button>
                 {/* <SignUpPage /> */}
