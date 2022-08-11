@@ -1,10 +1,11 @@
 .loginContainer {
   display: flex;
   width: 50vw;
-  height: 100vh;
+  height: 85%;
   /* border: 1px solid red; */
   margin-left: 15vw;
   background-color: white;
+  overflow-y: scroll;
 }
 .leftLoginContainer {
   width: 120px;
@@ -119,10 +120,15 @@
   margin-top: 10px;
 }
 
+.loginContainer::-webkit-scrollbar {
+  background: transparent;
+}
+
 @media screen and (max-width: 620px) {
   .loginContainer {
     width: 100vw;
     margin: 0px;
+    height: 100vh;
   }
   .secondPartRightLoginCard {
     margin-right: 10%;

@@ -4,6 +4,7 @@
   left: 10%;
   z-index: 2000;
   height: 100%;
+  margin-top: 8vh;
 }
 
 .overflowLogin {
@@ -21,5 +22,6 @@
   .modalLogin {
     width: 100%;
     left: 0;
+    margin: 0;
   }
 }
