@@ -48,7 +48,7 @@ export default function NavBar() {
       <div>
         <div className="flex items-center space-x-2 py-1 justify-between">
           <div className="flex items-center space-x-2 sm:space-x-1">
-            <div className="hamIcon ">
+            <div className="hamIcon hidden lg:block">
               <DrawerHam />
             </div>
             <Link to="/">
