@@ -47,8 +47,8 @@ export default function Card() {
 
   if (load) {
     return (
-      <div className="">
-        <div className="bg-gray-300 w-[800px] lg:w-[600px] mx-auto md:w-[500px] sm:w-[400px] xsm:w-[360px]">
+      <div className="flex justify-center">
+        <div className="bg-gray-300 w-[800px] lg:w-[600px] mx-auto md:w-[500px] sm:w-[400px] xsm:w-[350px] ">
           {/* */}
           {/* Top section */}
           <div className="text-white bg-black flex justify-between py-3 px-5 ">
@@ -96,7 +96,7 @@ export default function Card() {
               <p className="text-xs font-bold ">
                 {data[0].data.children[0].data.subreddit_name_prefixed}
               </p>
-              <p className="font-semibold text-lg mb-4">
+              <p className="font-semibold text-lg mb-4 xsm:text-base xsm:w-[270px]">
                 {data[0].data.children[0].data.title}
               </p>
               <div className="flex justify-center w-[600px] lg:w-[400px] sm:w-[300px] xsm:w-[250px]">
@@ -123,8 +123,8 @@ export default function Card() {
                     </video>
                   ))}
               </div>
-              <div className="flex space-x-4 font-semibold text-sm items-center text-gray-500 mt-4">
-                <div className="flex items-center space-x-1">
+              <div className="flex space-x-4 font-semibold text-sm items-center text-gray-500 mt-4 xsm:space-x-1 ">
+                <div className="flex items-center space-x-1 ">
                   <svg
                     id="SvgjsSvg1001"
                     width="18"
@@ -150,7 +150,7 @@ export default function Card() {
                       </svg>
                     </g>
                   </svg>
-                  <p>Comments</p>
+                  <p className="xsm:text-xs">Comments</p>
                 </div>
                 <div className="flex items-center space-x-1">
                   <svg
@@ -178,7 +178,7 @@ export default function Card() {
                       </svg>
                     </g>
                   </svg>
-                  <p>Share</p>
+                  <p className="xsm:text-xs">Share</p>
                 </div>
                 <div className="flex items-center space-x-1">
                   <svg
@@ -200,19 +200,19 @@ export default function Card() {
                       ></path>
                     </g>
                   </svg>
-                  <p>Save</p>
+                  <p className="xsm:text-xs">Save</p>
                 </div>
 
-                <p>Hide</p>
-                <p>Report</p>
-                <p>Tip</p>
+                <p className="xsm:text-xs">Hide</p>
+                <p className="xsm:text-xs">Report</p>
+                <p className="xsm:text-xs">Tip</p>
               </div>
             </div>
           </div>
 
           {/* Sign up and Sign in Section */}
           <div className=" signUp bg-white py-1 mt-4 flex justify-center">
-            <div className="border-[1px] border-gray-300 flex bg-white mt-4 mx-2 px-4 text-gray-400 font-semibold py-3 justify-between rounded w-[650px]">
+            <div className="border-[1px] border-gray-300 flex bg-white mt-4 mx-2 px-4 text-gray-400 font-semibold py-3 justify-between rounded w-[650px] xsm:w-[350px]">
               <div>
                 <p>Log in or sign up to leave a comment</p>
               </div>
@@ -230,14 +230,14 @@ export default function Card() {
           </div>
 
           {/* Comments Section */}
-          <div className="comments bg-white">
+          <div className="comments bg-white ">
             {data[1].data.children
               .map((e, i) => {
                 return (
                   <div className="mx-10 py-5" key={i}>
                     <p className="font-semibold text-sm">{e.data.author}</p>
                     <p>{e.data.body}</p>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 xsm:space-x-1">
                       <img src={uppArrowPic} className="w-4 h-4" />
                       <p>{e.data.ups}</p>
                       <img src={downArrowPic} className="w-4 h-4" />
@@ -267,21 +267,21 @@ export default function Card() {
                             </svg>
                           </g>
                         </svg>
-                        <p className="text-sm font-semibold text-gray-500">
+                        <p className="text-sm font-semibold text-gray-500 xsm:text-xs">
                           Reply
                         </p>
                       </div>
-                      <p className="text-sm font-semibold text-gray-500">
+                      <p className="text-sm font-semibold text-gray-500 xsm:text-xs">
                         Share
                       </p>
-                      <p className="text-sm font-semibold text-gray-500">
+                      <p className="text-sm font-semibold text-gray-500 xsm:text-xs">
                         Report
                       </p>
-                      <p className="text-sm font-semibold text-gray-500">
+                      <p className="text-sm font-semibold text-gray-500 xsm:text-xs">
                         Save
                       </p>
-                      <p className="text-sm font-semibold text-gray-500">Tip</p>
-                      <p className="text-sm font-semibold text-gray-500">
+                      <p className="text-sm font-semibold text-gray-500 xsm:text-xs">Tip</p>
+                      <p className="text-sm font-semibold text-gray-500 xsm:text-xs">
                         Follow
                       </p>
                     </div>
@@ -291,7 +291,7 @@ export default function Card() {
               .slice(0, 20)}
           </div>
         </div>
-      </div>
+        </div>
     );
   }
 }

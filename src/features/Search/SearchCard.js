@@ -17,8 +17,8 @@ export default function SearchCard(props) {
 
   return (
     <Link to={permalink} onClick={handleClick}>
-      <div className="w-[800px] mx-auto lg:w-[580px] md:w-[550px] sm:w-[390px] xsm:w-[310px] ">
-        <div className="flex flex-col border-[0.4px] border-gray-400 bg-white mx-2 my-1 rounded">
+      <div className="w-[800px] mx-auto lg:w-[580px] md:w-[550px] sm:w-[390px] xsm:w-[full] xsm:px-6 ">
+        <div className="flex flex-col border-[0.4px] border-gray-400 bg-white my-1 rounded">
           <div className="flex justify-between">
             <div className="top flex mx-2 flex-col py-1 w-3/4">
               {/* <p className='text-sm text-gray-700'>r/{props.subreddit}</p> */}

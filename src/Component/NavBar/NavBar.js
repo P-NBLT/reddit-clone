@@ -48,11 +48,11 @@ export default function NavBar() {
       <div>
         <div className="flex items-center space-x-2 py-1 justify-between">
           <div className="flex items-center space-x-2 sm:space-x-1">
-            {/* <div className="hamIcon ">
+            <div className="hamIcon ">
               <DrawerHam />
-            </div> */}
+            </div>
             <Link to="/">
-              <div className="reddit-logo ml-10 ">
+              <div className="reddit-logo  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
