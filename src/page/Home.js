@@ -48,7 +48,6 @@ const Home = () => {
     fetchData();
   }, []);
 
-  console.log("data", data, "prams", subId);
   if (!isOpen) {
     return (
       <div className="homeContainer">
