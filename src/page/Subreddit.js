@@ -24,7 +24,7 @@ const Subreddit = () => {
   const status = useSelector((state) => state.category.loading);
   const { permalinkId } = useParams();
   const { subId } = useParams();
-  console.log("params", subId, permalinkId, data);
+
   // we use useState to know if the modal is open or close.
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,12 +48,11 @@ const Subreddit = () => {
   const handleClick = (e) => {
     let id = e.target.closest("a").id;
     const dataForArticle = data.data.children[Number(id)].data.permalink;
-    console.log("id", id);
+
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
-  console.log("pape veut voir la data ", data);
-  // console.log("open", isOpen);
+
   if (!isOpen) {
     return (
       <div className="subredditContainerMaster">

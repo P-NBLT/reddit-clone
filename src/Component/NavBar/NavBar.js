@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalLogin from "../ModalLogin";
-import logo from '../../Media/logo.png'
+import logo from "../../Media/logo.png";
 
 export default function NavBar() {
   const [text, setText] = useState("");
@@ -33,8 +33,7 @@ export default function NavBar() {
   const keyDownHandler = (e) => {
     e.preventDefault();
     setSearchParams(`q=${text}`);
-    console.log(linkf);
-    console.log("blabla");
+
     setload(true);
     navigate(`/search/?q=${text}`);
   };
@@ -42,7 +41,6 @@ export default function NavBar() {
     setText(e.target.value);
   };
 
-  console.log("the open here is", isOpen);
   if (!isOpen) {
     return (
       <div>
@@ -70,8 +68,7 @@ export default function NavBar() {
             </Link>
             <Link to="/">
               <div className="reddit-name lg:hidden">
-               
-                <img src={logo} className='w-20'/>
+                <img src={logo} className="w-20" />
               </div>
             </Link>
           </div>
@@ -118,7 +115,6 @@ export default function NavBar() {
                 <button
                   onClick={() => {
                     setIsOpen(true);
-                    console.log(isOpen);
                   }}
                   className=" font-semibold border-2 border-blue-500 rounded-2xl w-24 text-blue-500 p-[2px] mx-1 hover:bg-blue-100 xl:w-16 xl:text-sm sm:hidden"
                 >
@@ -127,7 +123,6 @@ export default function NavBar() {
                 <button
                   onClick={() => {
                     setIsOpen(true);
-                    console.log(isOpen);
                   }}
                   className="bg-blue-500 text-white w-24 rounded-2xl border-2 border-blue-500 p-[2px] font-semibold hover:bg-blue-400 xl:w-16 xl:text-sm sm:hidden"
                 >
@@ -172,7 +167,6 @@ export default function NavBar() {
                     <MenuItem
                       onClick={() => {
                         setIsOpen(true);
-                        console.log(isOpen);
                       }}
                     >
                       {" "}
@@ -181,7 +175,6 @@ export default function NavBar() {
                     <MenuItem
                       onClick={() => {
                         setIsOpen(true);
-                        console.log(isOpen);
                       }}
                     >
                       Sign Up
@@ -288,7 +281,6 @@ export default function NavBar() {
                   <button
                     onClick={() => {
                       setIsOpen(true);
-                      console.log(isOpen);
                     }}
                     className=" font-semibold border-2 border-blue-500 rounded-2xl w-24 text-blue-500 p-[2px] mx-1 hover:bg-blue-100 xl:w-16 xl:text-sm sm:hidden"
                   >
@@ -297,7 +289,6 @@ export default function NavBar() {
                   <button
                     onClick={() => {
                       setIsOpen(true);
-                      console.log(isOpen);
                     }}
                     className="bg-blue-500 text-white w-24 rounded-2xl border-2 border-blue-500 p-[2px] font-semibold hover:bg-blue-400 xl:w-16 xl:text-sm sm:hidden"
                   >
