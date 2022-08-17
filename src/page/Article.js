@@ -187,8 +187,10 @@ const Article = ({ open, onClose }) => {
                             "v" ? (
                             <video
                               src={
-                                data[0].data.children[0].data.media.reddit_video
-                                  .fallback_url
+                                data[0].data.children[0].data.media
+                                  ? data[0].data.children[0].data.media
+                                      .reddit_video.fallback_url
+                                  : null
                               }
                               autoPlay
                               muted

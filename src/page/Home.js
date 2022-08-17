@@ -33,6 +33,8 @@ const Home = () => {
     e.stopPropagation();
   };
 
+  console.log(data);
+
   const handleClick = (e) => {
     e.preventDefault();
     let id = e.target.closest("a").id;
@@ -97,7 +99,11 @@ const Home = () => {
                         />
                       ) : getMedia(el.data.url) == "v" ? (
                         <video
-                          src={el.data.media.reddit_video.fallback_url}
+                          src={
+                            el.data.media
+                              ? el.data.media.reddit_video.fallback_url
+                              : null
+                          }
                           autoPlay
                           muted
                           controls
