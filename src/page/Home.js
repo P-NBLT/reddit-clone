@@ -33,8 +33,6 @@ const Home = () => {
     e.stopPropagation();
   };
 
-  console.log(data);
-
   const handleClick = (e) => {
     e.preventDefault();
     let id = e.target.closest("a").id;
