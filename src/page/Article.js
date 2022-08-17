@@ -25,7 +25,6 @@ const Article = ({ open, onClose }) => {
   const status = useSelector((state) => state.article.loading);
   const [isOpen, setIsOpen] = useState(false);
   let img, result;
-  console.log("permalink", permalink, open);
 
   const getMedia = (url) => {
     return url.replace(new RegExp(`(https://)(.\.)(.*$)`), "$2");
@@ -39,7 +38,6 @@ const Article = ({ open, onClose }) => {
   useEffect(() => {
     const fetchData = async () => {
       if (open) {
-        console.log("article it pass");
         dispatch(getArticleData(permalink));
       }
     };
@@ -53,7 +51,6 @@ const Article = ({ open, onClose }) => {
             data[0].data.children[0].data.media_metadata
           )[0].p[0].u.replace(/amp;/g, "")
         : null;
-      console.log(img);
 
       const renderTime = () => {
         const year =
@@ -71,7 +68,6 @@ const Article = ({ open, onClose }) => {
         const minute =
           new Date().getMinutes() -
           new Date(data[0].data.children[0].data.created * 1000).getMinutes();
-        console.log(year, month, day, hour, minute);
 
         if (year > 1) return (result = year.toString() + " years ago");
         else if (year > 0) return (result = year.toString() + " year ago");
@@ -90,7 +86,7 @@ const Article = ({ open, onClose }) => {
       renderTime();
     }
   }, [data]);
-  //   console.log("opennnnnn", open);
+
   if (!isOpen) {
     return (
       <>

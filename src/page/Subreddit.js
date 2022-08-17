@@ -52,7 +52,7 @@ const Subreddit = () => {
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
-  console.log(data);
+
   if (!isOpen) {
     return (
       <div className="subredditContainerMaster">
@@ -64,11 +64,6 @@ const Subreddit = () => {
             {/* <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal> */}
             {data
               ? data.data.children.map((el, idx) => {
-                  console.log(
-                    getMedia(el.data.url),
-                    getMedia(el.data.url) === "v." ? true : false,
-                    idx
-                  );
                   let text;
                   if (el.data.selftext && el.data.selftext.length > 150) {
                     text = el.data.selftext.slice(0, 250).concat("...");
