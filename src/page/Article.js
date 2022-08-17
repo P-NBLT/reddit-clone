@@ -28,7 +28,7 @@ const Article = ({ open, onClose }) => {
   console.log("permalink", permalink, open);
 
   const getMedia = (url) => {
-    return url.replace(new RegExp(`(https://)(.)(\.*$)`), "$2");
+    return url.replace(new RegExp(`(https://)(.\.)(.*$)`), "$2");
   };
 
   const backToTop = () => {
@@ -184,7 +184,7 @@ const Article = ({ open, onClose }) => {
                               className="picArticleCard"
                             />
                           ) : getMedia(data[0].data.children[0].data.url) ==
-                            "v" ? (
+                            "v." ? (
                             <video
                               src={
                                 data[0].data.children[0].data.media

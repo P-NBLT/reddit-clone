@@ -29,7 +29,7 @@ const Subreddit = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getMedia = (url) => {
-    return url.replace(new RegExp(`(https://)(.)(\.*$)`), "$2");
+    return url.replace(new RegExp(`(https://)(.\.)(.*$)`), "$2");
   };
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Subreddit = () => {
     dispatch(articleActions.updatePermalink(dataForArticle));
     setIsOpen(true);
   };
-
+  console.log(data);
   if (!isOpen) {
     return (
       <div className="subredditContainerMaster">
@@ -64,6 +64,11 @@ const Subreddit = () => {
             {/* <Modal onClose={() => setIsOpen(false)} open={isOpen}></Modal> */}
             {data
               ? data.data.children.map((el, idx) => {
+                  console.log(
+                    getMedia(el.data.url),
+                    getMedia(el.data.url) === "v." ? true : false,
+                    idx
+                  );
                   let text;
                   if (el.data.selftext && el.data.selftext.length > 150) {
                     text = el.data.selftext.slice(0, 250).concat("...");
@@ -115,7 +120,7 @@ const Subreddit = () => {
                               src={el.data.url}
                               className="picAndVidSubbreditCardBody"
                             />
-                          ) : getMedia(el.data.url) == "v" ? (
+                          ) : getMedia(el.data.url) === "v." ? (
                             <video
                               src={
                                 el.data.media
@@ -125,7 +130,7 @@ const Subreddit = () => {
                               autoPlay
                               muted
                               controls
-                              webkit-playsinline="true"
+                              webkit-playsinline
                               playsInline
                               className="picAndVidSubbreditCardBody"
                             ></video>

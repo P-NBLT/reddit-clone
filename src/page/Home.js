@@ -26,7 +26,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getMedia = (url) => {
-    return url.replace(new RegExp(`(https://)(.)(\.redd)(\.*$)`), "$2");
+    return url.replace(new RegExp(`(https://)(.\.)(.*$)`), "$2");
   };
 
   const handleScore = (e) => {
@@ -97,7 +97,7 @@ const Home = () => {
                           src={el.data.url}
                           className="picAndVidHomeCardBody"
                         />
-                      ) : getMedia(el.data.url) == "v" ? (
+                      ) : getMedia(el.data.url) == "v." ? (
                         <video
                           src={
                             el.data.media
