@@ -26,7 +26,7 @@ Reddit-lite is an imitation of the Reddit platform which allows you to consume c
 
 - [App demo](#app-demo)
 - [Used technologies and concepts](#used-technologies-and-concepts)
-- Comment(#comment)
+- [Comment](#comment)
 
 ---
 
