@@ -33,18 +33,16 @@ Reddit-lite is an imitation of the Reddit platform which allows you to consume c
 App demo
 ---
 
-![saerchJob](https://user-images.githubusercontent.com/98712114/191301453-6a587936-1f2c-4ee9-99fb-3619c7a7e8a4.gif)
+![reddit](https://user-images.githubusercontent.com/98712114/191453431-68016bd3-e8a6-4233-ab19-a81887621eaf.gif)
+
 
 # Used technologies and concepts
 ---
 ## 👇 Click links to see code sample in this project 👇
 
-- [React for UI building](https://github.com/P-NBLT/static-website-project/blob/main/pages/index.js)
-- [React router] 🐣
-- [Redux for the data flow] 🐣
-- PostgreSQL for the futur database. Not yet implemented. 🐣
-- [React-hook-form forthe form] 🐣
-- [Yup for data validation (works with the form)] 🐣
+- [React for UI building](https://github.com/P-NBLT/reddit-clone/blob/main/src/Component/Categories.js)
+- [React router](https://github.com/P-NBLT/reddit-clone/blob/main/src/App.js) 🐣
+- [Redux for the data flow](https://github.com/P-NBLT/reddit-clone/blob/main/src/Component/categoriesSlice.js) 🐣
 
 🐣 *New technology learned during this project*
 
